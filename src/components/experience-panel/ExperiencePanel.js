@@ -41,7 +41,15 @@ class ExperiencePanel extends Component {
                                                     <span
                                                         className={styles.jobDuration}>{startDate.format('MMM YYYY')} - {role.currentJob ? 'Present' : timeEnd.format('MMM YYYY')}</span>
                                                     <span className={styles.jobLocation}>{role.location}</span>
-                                                    <p className={styles.jobDescription}>{role.description}</p>
+                                                    <ul className={styles.jobDescription}>
+                                                        {Array.isArray(role.description)
+                                                            ? role.description.map((desc, descIndex) => (
+                                                                <li key={descIndex}>{desc}</li>
+                                                            ))
+                                                            : role.description.split('. ').map((desc, descIndex) => (
+                                                                <li key={descIndex}>{desc}</li>
+                                                            ))}
+                                                    </ul>
                                                 </div>
                                             })}
                                         </Media>

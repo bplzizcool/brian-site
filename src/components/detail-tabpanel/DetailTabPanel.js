@@ -34,7 +34,7 @@ class DetailTabPanel extends Component {
         const { theme } = this.props;
         return (
             <div className={styles.tabPanelRoot}>
-                <AppBar position="static" className={styles.appBar}>
+                <AppBar position="fixed" className={styles.appBar}>
                     <Tabs value={value} variant="fullWidth" onChange={this.handleChange}>
                         <Tab className={styles.tabPanelText} label="My Experience" />
                         <Tab className={styles.tabPanelText} label="My Skills" />

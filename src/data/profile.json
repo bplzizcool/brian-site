@@ -17,7 +17,17 @@
       "roles": [
         {
           "title": "Software Engineer II",
-          "description": "Designs, modifies and implements software application changes",
+          "description": [
+            "Designs, modifies, implements, and documents software application changes.", 
+            "Tests and supports applications internally and externally.", 
+            "Participates in analysis, design, testing, and review processes.", 
+            "Provides estimations of work based on requirements.", 
+            "Writes product specifications, designs, and technical manuals.",
+            "Evaluates third-party products and specifications.", 
+            "Maintains responsibility of assigned tasks by using experience/knowledge of environment to make development decisions.", 
+            "Educates others (technical and non-technical) on areas of expertise.", 
+            "Provides development level support for assigned products and projects throughout the development lifecycle."
+          ],
           "startDate": "2021-11-03",
           "currentJob": true,
           "location": "Atlanta, GA"
@@ -31,7 +41,11 @@
       "roles": [
         {
           "title": "Web Development Supervisor",
-          "description": "Managed development of the presentation layer for UPS.com applications. Collaborated with cross-functional teams and vendors to deliver accurate, timely webpages meeting WCAG and brand standards.",
+          "description": [
+            "Manages development of the presentation layer for UPS.com applications.", 
+            "I work with cross-functional teams and vendors to deliver web pages that are accurate, on time, and meet WCAG/brand standards.", 
+            "In this role I manage web development specialists as well as offshore resources."
+          ],
           "startDate": "2019-03-01",
           "endDate": "2021-10-01",
           "location": "Alpharetta, GA"
@@ -45,7 +59,12 @@
       "roles": [
         {
           "title": "Web Development Specialist",
-          "description": "Led development of the Shipping app for the Digital Experience team since May 2018.",
+          "description": [
+            "Lead developer on Shipping app for the Digital Experience team since May 2018",
+            "Intimate knowledge of UPS systems, architecture and design",
+            "Offshore as well as on site management and coordination of other developers",
+            "Lead multiple production deployments"
+          ],
           "startDate": "2017-10-01",
           "endDate": "2019-03-01",
           "location": "Alpharetta, GA"
@@ -179,18 +198,6 @@
       "Description": "Demo",
       "ScreenShotURL": "./demo.svg",
       "ProjectLink": "https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg"
-    },
-    {
-      "Name": "Demo Project 2",
-      "Description": "Demo",
-      "ScreenShotURL": "./demo.svg",
-      "ProjectLink": "https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg"
-    },
-    {
-      "Name": "Demo Project 3",
-      "Description": "Demo",
-      "ScreenShotURL": "./demo.svg",
-      "ProjectLink": "https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg"
     }
   ],
   "Education": [
@@ -207,14 +214,6 @@
           "Name": "Award 1",
           "Date": "Mar 2017",
           "Region": "Vancouver BC. Canada",
-          "Organization": "Demo",
-          "Description": "Demo award",
-          "Link": "https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg"
-        },
-        {
-          "Name": "Award 2",
-          "Date": "May 2019",
-          "Region": "Toronto ON. Canada",
           "Organization": "Demo",
           "Description": "Demo award",
           "Link": "https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg"

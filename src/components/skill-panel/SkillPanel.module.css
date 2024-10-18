@@ -10,3 +10,7 @@
 .skillPanel .skillPanelDetail {
     display: inline-block;
 }
+
+.skillPanel {
+    margin-top: 3em;
+}
