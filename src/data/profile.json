@@ -1,0 +1,225 @@
+{
+  "Name": "Brian Lane",
+  "Position": "Software Engineer II",
+  "Description": "Coding, Creativity, and a Stellar Passion for Spaceflight",
+  "Address": "Atlanta, GA",
+  "Company": "NCR Voyix",
+  "School": "Georgia State University",
+  "SocialMedias": [
+    "https://github.com/bplzizcool",
+    "https://www.linkedin.com/in/brian-lane-dev/"
+  ],
+  "experiences": [
+    {
+      "companyName": "NCR Voyix",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/a/a7/NCR_Voyix_logo.svg",
+      "url": "https://www.ncrvoyix.com/",
+      "roles": [
+        {
+          "title": "Software Engineer II",
+          "description": "Designs, modifies and implements software application changes",
+          "startDate": "2021-11-03",
+          "currentJob": true,
+          "location": "Atlanta, GA"
+        }
+      ]
+    },
+    {
+      "companyName": "United Parcel Service (UPS)",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/1/1b/UPS_Logo_Shield_2017.svg",
+      "url": "https://www.ups.com/",
+      "roles": [
+        {
+          "title": "Web Development Supervisor",
+          "description": "Managed development of the presentation layer for UPS.com applications. Collaborated with cross-functional teams and vendors to deliver accurate, timely webpages meeting WCAG and brand standards.",
+          "startDate": "2019-03-01",
+          "endDate": "2021-10-01",
+          "location": "Alpharetta, GA"
+        }
+      ]
+    },
+    {
+      "companyName": "TAPFIN, Manpower Group",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/1/14/ManpowerGroup_logo.svg",
+      "url": "https://www.manpowergroup.com/en",
+      "roles": [
+        {
+          "title": "Web Development Specialist",
+          "description": "Led development of the Shipping app for the Digital Experience team since May 2018.",
+          "startDate": "2017-10-01",
+          "endDate": "2019-03-01",
+          "location": "Alpharetta, GA"
+        }
+      ]
+    }
+  ],
+  "Skills": [
+    {
+      "Area": "Programming Languages",
+      "SkillSet": [
+        {
+          "Name": "React",
+          "Hot": true
+        },
+        {
+          "Name": "JavaScript",
+          "Hot": true
+        },
+        {
+          "Name": "Angular",
+          "Hot": false
+        },
+        {
+          "Name": "Golang",
+          "Hot": false
+        }
+      ]
+    },
+    {
+      "Area": "Web-Based Application Development",
+      "SkillSet": [
+        {
+          "Name": "JavaScript (ES5, ES6)",
+          "Hot": true
+        },
+        {
+          "Name": "TypeScript",
+          "Hot": false
+        },
+        {
+          "Name": "HTML5",
+          "Hot": true
+        },
+        {
+          "Name": "CSS (SCSS/SASS)",
+          "Hot": true
+        },
+        {
+          "Name": "React",
+          "Hot": true
+        },
+        {
+          "Name": "Redux",
+          "Hot": false
+        },
+        {
+          "Name": "JQuery",
+          "Hot": false
+        },
+        {
+          "Name": "NPM",
+          "Hot": false
+        }
+      ]
+    },
+    {
+      "Area": "Database",
+      "SkillSet": [
+        {
+          "Name": "Google Cloud Platform",
+          "Hot": false
+        }
+      ]
+    },
+    {
+      "Area": "Platforms",
+      "SkillSet": [
+        {
+          "Name": "Windows",
+          "Hot": false
+        },
+        {
+          "Name": "Unix/Linux",
+          "Hot": true
+        },
+        {
+          "Name": "Mac OS",
+          "Hot": true
+        }
+      ]
+    },
+    {
+      "Area": "Test Driven Development",
+      "SkillSet": [
+        {
+          "Name": "Cypress Io",
+          "Hot": true
+        },
+        {
+          "Name": "JEST/Junit",
+          "Hot": true
+        }
+      ]
+    },
+    {
+      "Area": "Software Development Tools and Concepts",
+      "SkillSet": [
+        {
+          "Name": "GitHub",
+          "Hot": true
+        },
+        {
+          "Name": "Docker",
+          "Hot": false
+        },
+        {
+          "Name": "Agile",
+          "Hot": true
+        },
+        {
+          "Name": "UX/UI Design",
+          "Hot": false
+        }
+      ]
+    }
+  ],
+  "Projects": [
+    {
+      "Name": "Demo Project 1",
+      "Description": "Demo",
+      "ScreenShotURL": "./demo.svg",
+      "ProjectLink": "https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg"
+    },
+    {
+      "Name": "Demo Project 2",
+      "Description": "Demo",
+      "ScreenShotURL": "./demo.svg",
+      "ProjectLink": "https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg"
+    },
+    {
+      "Name": "Demo Project 3",
+      "Description": "Demo",
+      "ScreenShotURL": "./demo.svg",
+      "ProjectLink": "https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg"
+    }
+  ],
+  "Education": [
+    {
+      "SchoolName": "Georgia State University",
+      "Degree": "B.S. - Computer Science",
+      "Date": "2013 - 2017",
+      "Location": "Atlanta, GA",
+      "Description": "Concentration: Graphics and Human Computer Interaction",
+      "SchoolImage": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Georgia_State_University_Logo.svg",
+      "SchoolLink": "https://gsu.edu",
+      "Awards": [
+        {
+          "Name": "Award 1",
+          "Date": "Mar 2017",
+          "Region": "Vancouver BC. Canada",
+          "Organization": "Demo",
+          "Description": "Demo award",
+          "Link": "https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg"
+        },
+        {
+          "Name": "Award 2",
+          "Date": "May 2019",
+          "Region": "Toronto ON. Canada",
+          "Organization": "Demo",
+          "Description": "Demo award",
+          "Link": "https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg"
+        }
+      ]
+    }
+  ]
+}
