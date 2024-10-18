@@ -4,6 +4,7 @@
 
 .appBar {
   font-family: "Share Tech", sans-serif;
+  padding-left: calc(100% - 18em);
   font-size: 68px;
   color: white;
   display: flex;

@@ -1,5 +1,6 @@
 .experienceContainer {
     padding: 3em 0px 0px 0px;
+    overflow: hidden;
 }
 
 a:hover {
