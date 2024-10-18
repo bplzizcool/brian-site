@@ -1,17 +1,17 @@
 {
-  "main.css": "/brian-site/static/css/main.bda0982d.chunk.css",
-  "main.js": "/brian-site/static/js/main.b4fadd7b.chunk.js",
-  "main.js.map": "/brian-site/static/js/main.b4fadd7b.chunk.js.map",
+  "main.css": "/brian-site/static/css/main.5655f0b5.chunk.css",
+  "main.js": "/brian-site/static/js/main.157b3f0d.chunk.js",
+  "main.js.map": "/brian-site/static/js/main.157b3f0d.chunk.js.map",
   "runtime~main.js": "/brian-site/static/js/runtime~main.147d14e5.js",
   "runtime~main.js.map": "/brian-site/static/js/runtime~main.147d14e5.js.map",
   "static/css/2.03cbce4e.chunk.css": "/brian-site/static/css/2.03cbce4e.chunk.css",
   "static/js/2.d08898cd.chunk.js": "/brian-site/static/js/2.d08898cd.chunk.js",
   "static/js/2.d08898cd.chunk.js.map": "/brian-site/static/js/2.d08898cd.chunk.js.map",
   "index.html": "/brian-site/index.html",
-  "precache-manifest.b38cf4b7bd5ff92e26c850d996dd9657.js": "/brian-site/precache-manifest.b38cf4b7bd5ff92e26c850d996dd9657.js",
+  "precache-manifest.954dd5c90e00a3b6420095b7efbe6ee8.js": "/brian-site/precache-manifest.954dd5c90e00a3b6420095b7efbe6ee8.js",
   "service-worker.js": "/brian-site/service-worker.js",
   "static/css/2.03cbce4e.chunk.css.map": "/brian-site/static/css/2.03cbce4e.chunk.css.map",
-  "static/css/main.bda0982d.chunk.css.map": "/brian-site/static/css/main.bda0982d.chunk.css.map",
+  "static/css/main.5655f0b5.chunk.css.map": "/brian-site/static/css/main.5655f0b5.chunk.css.map",
   "static/media/demo.svg": "/brian-site/static/media/demo.67edcff8.svg",
   "static/media/profile_pic.jpg": "/brian-site/static/media/profile_pic.e1d13740.jpg"
 }
