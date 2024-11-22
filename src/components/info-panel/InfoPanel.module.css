@@ -1,9 +1,9 @@
 .drawer {
-  width: 500px;
+  width: 6em;
 }
 
 .drawer .drawerPaper {
-  width: 500px;
+  width: 6em;
   box-shadow: 0.5px 0px 11px 0px rgba(0, 0, 0, 1),
     0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 3px 3px -2px rgba(0, 0, 0, 0.12);
   font-family: "Share Tech", sans-serif;
