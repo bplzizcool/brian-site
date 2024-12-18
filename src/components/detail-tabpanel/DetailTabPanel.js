@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
@@ -10,47 +10,41 @@ import ProjectTabPanel from '../project-tabpanel/ProjectTabPanel';
 import SwipeableViews from 'react-swipeable-views';
 import styles from './DetailTabPanel.module.css';
 
-class DetailTabPanel extends Component {
+const DetailTabPanel = ({ theme }) => {
+    const [value, setValue] = useState(0);
 
-    constructor(props) {
-        super(props);
-        this.handleChangeIndex = this.handleChangeIndex.bind(this);
-        this.handleChange = this.handleChange.bind(this);
-        this.state = {
-            value: 0,
-        };
-    }
-
-    handleChange = (event, value) => {
-        this.setState({ value });
+    const handleChange = (event, newValue) => {
+        setValue(newValue);
     };
 
-    handleChangeIndex = index => {
-        this.setState({ value: index });
+    const handleChangeIndex = index => {
+        setValue(index);
     };
 
-    render() {
-        const { value } = this.state;
-        const { theme } = this.props;
-        return (
-            <div className={styles.tabPanelRoot}>
-                <AppBar position="fixed" className={styles.appBar}>
-                    <Tabs value={value} variant="fullWidth" onChange={this.handleChange}>
-                        <Tab className={styles.tabPanelText} label="My Experience" />
-                        <Tab className={styles.tabPanelText} label="My Skills" />
-                        <Tab className={styles.tabPanelText} label="My Education" />
-                        <Tab className={styles.tabPanelText} label="My Personal Projects" />
-                    </Tabs>
-                </AppBar>
-                <SwipeableViews animateHeight={true} className={styles.tabContainer} axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'} index={this.state.value} onChangeIndex={this.handleChangeIndex}>
-                    <ExperiencePanel dir={theme.direction}></ExperiencePanel>
-                    <SkillPanel dir={theme.direction}></SkillPanel>
-                    <EducationPanel dir={theme.direction}></EducationPanel>
-                    <ProjectTabPanel dir={theme.direction}></ProjectTabPanel>
-                </SwipeableViews>
-            </div>
-        );
-    }
-}
+    return (
+        <div className={styles.tabPanelRoot}>
+            <AppBar position="fixed" className={styles.appBar}>
+                <Tabs value={value} variant="fullWidth" onChange={handleChange}>
+                    <Tab className={styles.tabPanelText} label="My Experience" />
+                    <Tab className={styles.tabPanelText} label="My Skills" />
+                    <Tab className={styles.tabPanelText} label="My Education" />
+                    <Tab className={styles.tabPanelText} label="My Personal Projects" />
+                </Tabs>
+            </AppBar>
+            <SwipeableViews
+                animateHeight={true}
+                className={styles.tabContainer}
+                axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
+                index={value}
+                onChangeIndex={handleChangeIndex}
+            >
+                <ExperiencePanel dir={theme.direction}></ExperiencePanel>
+                <SkillPanel dir={theme.direction}></SkillPanel>
+                <EducationPanel dir={theme.direction}></EducationPanel>
+                <ProjectTabPanel dir={theme.direction}></ProjectTabPanel>
+            </SwipeableViews>
+        </div>
+    );
+};
 
 export default withStyles(styles, { withTheme: true })(DetailTabPanel);
