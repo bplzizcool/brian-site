@@ -204,14 +204,7 @@
       "SchoolImage": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Georgia_State_University_Logo.svg",
       "SchoolLink": "https://gsu.edu",
       "Awards": [
-        {
-          "Name": "Award 1",
-          "Date": "Mar 2017",
-          "Region": "Vancouver BC. Canada",
-          "Organization": "Demo",
-          "Description": "Demo award",
-          "Link": "https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg"
-        }
+
       ]
     }
   ]

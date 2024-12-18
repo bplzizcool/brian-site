@@ -12,7 +12,6 @@ const ExperiencePanel = () => {
             <Row>
                 <Col>
                     {profile.experiences.map((experience, i) => {
-
                         return (
                             <div key={i}>
                                 <Media className={styles.media}>

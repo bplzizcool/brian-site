@@ -1,16 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 import InfoPanel from './components/info-panel/InfoPanel';
 import DetailTabPanel from './components/detail-tabpanel/DetailTabPanel';
 
-class App extends Component {
-    render() {
-        return (
-            <div className="App">
-                <InfoPanel></InfoPanel>
-                <DetailTabPanel></DetailTabPanel>
-            </div>
-        );
-    }
-}
+const App = () => {
+    return (
+        <div className="App">
+            <InfoPanel />
+            <DetailTabPanel />
+        </div>
+    );
+};
 
 export default App;

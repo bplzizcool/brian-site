@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Accordion from '@material-ui/core/Accordion';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
@@ -9,40 +9,29 @@ import profile from '../../data/profile';
 import StarIcon from '@material-ui/icons/Star';
 import styles from './SkillPanel.module.css';
 
-class SkillPanel extends Component {
-    render() {
-        return (
-            <div className={styles.skillPanel}>
-                {
-                    profile.Skills.map((skill) => {
-                        return (
-                            <Accordion key={skill.Area} defaultExpanded>
-                                <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                                    <Typography variant="h5">{skill.Area}</Typography>
-                                </AccordionSummary>
-                                <AccordionDetails className={styles.skillPanelDetail}>
-                                    {
-                                        skill.SkillSet.map((skillDetail) => {
-                                            return (
-                                                <Chip
-                                                    icon={skillDetail.Hot ? <StarIcon /> : null}
-                                                    label={skillDetail.Name}
-                                                    className={styles.skillChip}
-                                                    color="primary"
-                                                    key={skillDetail.Name}
-                                                />
-                                            );
-                                        })
-                                    }
-                                </AccordionDetails>
-                            </Accordion>
-                        );
-                    })
-                }
-
-            </div>
-        );
-    }
-}
+const SkillPanel = () => {
+    return (
+        <div className={styles.skillPanel}>
+            {profile.Skills.map((skill) => (
+                <Accordion key={skill.Area} defaultExpanded>
+                    <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                        <Typography variant="h5">{skill.Area}</Typography>
+                    </AccordionSummary>
+                    <AccordionDetails className={styles.skillPanelDetail}>
+                        {skill.SkillSet.map((skillDetail) => (
+                            <Chip
+                                icon={skillDetail.Hot ? <StarIcon /> : null}
+                                label={skillDetail.Name}
+                                className={styles.skillChip}
+                                color="primary"
+                                key={skillDetail.Name}
+                            />
+                        ))}
+                    </AccordionDetails>
+                </Accordion>
+            ))}
+        </div>
+    );
+};
 
 export default SkillPanel;

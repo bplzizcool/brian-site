@@ -4,7 +4,7 @@
 
 .appBar {
   font-family: "Share Tech", sans-serif;
-  padding-left: calc(100% - 18em);
+  padding-left: calc(100% - 21em);
   font-size: 68px;
   color: white;
   display: flex;
@@ -22,12 +22,10 @@
   outline: none !important;
 }
 
-/* .react-swipeable-view-container {
-    max-height: calc(100vh + 50px);
-} */
-
 .tabPanelText span {
   font-weight: bold;
-  /* font-size: 18px;
-    padding: 8px; */
+}
+
+.tabPanelContainer {
+  width: 15em;
 }
