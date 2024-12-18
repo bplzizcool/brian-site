@@ -31,7 +31,7 @@ class ProjectTabPanel extends Component {
         const assetsPath = require.context('../../img', false, /\.(png|jpe?g|svg)$/);
         return (
             <div className={styles.projectPanel}>
-                <Grid justify="center" alignItems="center" container spacing={40}>
+                <Grid justifyContent="center" alignItems="center" container spacing={10}>
                     {profile.Projects.map((project, i) => {
                         return (
                             <Grid item key={project.Name + i} sm={9} md={9} lg={9}>

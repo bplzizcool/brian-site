@@ -19,7 +19,7 @@ class InfoCard extends Component {
     render() {
         return (
             <div>
-                <Grid container className={styles.infoGrid} justify="center" alignItems="center">
+                <Grid container className={styles.infoGrid} justifyContent="center" alignItems="center">
                     <Grid item>
                         <Avatar alt={profile.Name} className={styles.bigAvatar} src={require("../../img/profile_pic.jpg")} />
                     </Grid>
@@ -31,7 +31,7 @@ class InfoCard extends Component {
                             {profile.Position}
                         </Typography>
                         <Typography variant="h6" className={styles.introduction}>
-                        {profile.Description}
+                            {profile.Description}
                         </Typography>
                     </Grid>
                     <Divider className={styles.divider} variant="middle" />
@@ -41,25 +41,25 @@ class InfoCard extends Component {
                                 <Avatar className={styles.infoIcon}>
                                     <LocationCityIcon />
                                 </Avatar>
-                                <ListItemText primary={profile.Address}/>
+                                <ListItemText className={styles.profileListItem} primary={profile.Address} />
                             </ListItem>
                             <ListItem>
                                 <Avatar className={styles.infoIcon}>
                                     <WorkIcon />
                                 </Avatar>
-                                <ListItemText primary={profile.Company}/>
+                                <ListItemText className={styles.profileListItem} primary={profile.Company} />
                             </ListItem>
                             <ListItem>
                                 <Avatar className={styles.infoIcon}>
                                     <SchoolIcon />
                                 </Avatar>
-                                <ListItemText primary={profile.School}/>
+                                <ListItemText className={styles.profileListItem} primary={profile.School} />
                             </ListItem>
                         </List>
                     </Grid>
                     <Divider className={styles.divider} variant="middle" />
                     <Grid item xs={12} className={styles.socialMedias}>
-                    {socialMediaList.map(s => (<SocialIcon className={styles.socialMediasIcon} key={s} url={s} bgColor="#fff"/>))}
+                        {socialMediaList.map(s => (<SocialIcon className={styles.socialMediasIcon} key={s} url={s} bgColor="#fff" />))}
                     </Grid>
                 </Grid>
             </div>

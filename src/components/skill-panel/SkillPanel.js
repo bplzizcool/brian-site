@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import ExpansionPanel from '@material-ui/core/ExpansionPanel';
-import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
-import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
+import Accordion from '@material-ui/core/Accordion';
+import AccordionSummary from '@material-ui/core/AccordionSummary';
+import AccordionDetails from '@material-ui/core/AccordionDetails';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Chip from '@material-ui/core/Chip';
@@ -16,11 +16,11 @@ class SkillPanel extends Component {
                 {
                     profile.Skills.map((skill) => {
                         return (
-                            <ExpansionPanel key={skill.Area} defaultExpanded>
-                                <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+                            <Accordion key={skill.Area} defaultExpanded>
+                                <AccordionSummary expandIcon={<ExpandMoreIcon />}>
                                     <Typography variant="h5">{skill.Area}</Typography>
-                                </ExpansionPanelSummary>
-                                <ExpansionPanelDetails className={styles.skillPanelDetail}>
+                                </AccordionSummary>
+                                <AccordionDetails className={styles.skillPanelDetail}>
                                     {
                                         skill.SkillSet.map((skillDetail) => {
                                             return (
@@ -34,8 +34,8 @@ class SkillPanel extends Component {
                                             );
                                         })
                                     }
-                                </ExpansionPanelDetails>
-                            </ExpansionPanel>
+                                </AccordionDetails>
+                            </Accordion>
                         );
                     })
                 }

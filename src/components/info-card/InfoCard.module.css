@@ -50,9 +50,14 @@
 
 .infoList span {
   color: white;
+  padding-right: 1em;
 }
 
 .infoList .infoIcon {
   color: rgb(53, 53, 53);
   background-color: white;
+}
+
+.profileListItem {
+  padding-left: 10px;
 }

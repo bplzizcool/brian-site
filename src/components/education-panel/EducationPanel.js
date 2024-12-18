@@ -6,9 +6,9 @@ import ButtonBase from '@material-ui/core/ButtonBase';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Divider from '@material-ui/core/Divider';
-import ExpansionPanel from '@material-ui/core/ExpansionPanel';
-import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
-import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
+import Accordion from '@material-ui/core/Accordion';
+import AccordionSummary from '@material-ui/core/AccordionSummary';
+import AccordionDetails from '@material-ui/core/AccordionDetails';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import styles from './EducationPanel.module.css';
 
@@ -19,13 +19,13 @@ const EducationPanel = () => {
 
     return (
         <div className={styles.educationPanel}>
-            <Grid container justify="center" alignItems="center" spacing={8}>
+            <Grid container justifyContent="center" alignItems="center" spacing={4}>
                 {profile.Education.map((education) => (
                     <Grid item xs={12} sm={9} key={education.SchoolName}>
                         <Card className={styles.card}>
                             <div className={styles.cardDetails}>
                                 <CardContent>
-                                    <Grid container spacing={8}>
+                                    <Grid container spacing={4}>
                                         <Grid item xs={8}>
                                             <Typography component="h2" variant="h5">
                                                 {education.SchoolName}
@@ -50,13 +50,13 @@ const EducationPanel = () => {
                                         </Grid>
                                     </Grid>
                                     {education.Awards.length > 0 && (
-                                        <ExpansionPanel defaultExpanded>
-                                            <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+                                        <Accordion defaultExpanded>
+                                            <AccordionSummary expandIcon={<ExpandMoreIcon />}>
                                                 <Typography variant="h5">Awards</Typography>
-                                            </ExpansionPanelSummary>
+                                            </AccordionSummary>
                                             <Divider variant="middle" />
                                             {education.Awards.map((award) => (
-                                                <ExpansionPanelDetails key={award.Name}>
+                                                <AccordionDetails key={award.Name}>
                                                     <Grid container>
                                                         <Grid item xs={12}>
                                                             <Typography component="h2" variant="h5">
@@ -69,9 +69,9 @@ const EducationPanel = () => {
                                                             </Typography>
                                                         </Grid>
                                                     </Grid>
-                                                </ExpansionPanelDetails>
+                                                </AccordionDetails>
                                             ))}
-                                        </ExpansionPanel>
+                                        </Accordion>
                                     )}
                                 </CardContent>
                             </div>
