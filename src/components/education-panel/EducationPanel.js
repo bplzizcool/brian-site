@@ -1,15 +1,7 @@
 import React from 'react';
-import profile from "../../data/profile";
-import Typography from '@material-ui/core/Typography';
-import Grid from '@material-ui/core/Grid';
-import ButtonBase from '@material-ui/core/ButtonBase';
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
-import Divider from '@material-ui/core/Divider';
-import Accordion from '@material-ui/core/Accordion';
-import AccordionSummary from '@material-ui/core/AccordionSummary';
-import AccordionDetails from '@material-ui/core/AccordionDetails';
+import { Typography, Grid, ButtonBase, Card, CardContent, Divider, Accordion, AccordionSummary, AccordionDetails, Box } from '@material-ui/core';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import profile from '../../data/profile';
 import styles from './EducationPanel.module.css';
 
 const EducationPanel = () => {
@@ -18,7 +10,7 @@ const EducationPanel = () => {
     };
 
     return (
-        <div className={styles.educationPanel}>
+        <Box className={styles.educationPanel} overflow="auto" height="100%">
             <Grid container justifyContent="center" alignItems="center" spacing={4}>
                 {profile.Education.map((education) => (
                     <Grid item xs={12} sm={9} key={education.SchoolName}>
@@ -50,7 +42,7 @@ const EducationPanel = () => {
                                         </Grid>
                                     </Grid>
                                     {education.Awards.length > 0 && (
-                                        <Accordion defaultExpanded>
+                                        <Accordion>
                                             <AccordionSummary expandIcon={<ExpandMoreIcon />}>
                                                 <Typography variant="h5">Awards</Typography>
                                             </AccordionSummary>
@@ -79,7 +71,7 @@ const EducationPanel = () => {
                     </Grid>
                 ))}
             </Grid>
-        </div>
+        </Box>
     );
 };
 
