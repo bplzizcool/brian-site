@@ -19,8 +19,7 @@
           "title": "Software Engineer II",
           "description": [
             "As a Software Engineer II at NCR Voyix, I have been responsible for designing, modifying, implementing, and documenting software application changes. My role involves extensive testing and support for applications both internally and externally. I actively participate in analysis, design, testing, and review processes, providing accurate estimations of work based on requirements.",
-
-"I write detailed product specifications, designs, and technical manuals, and evaluate third-party products and specifications. Leveraging my experience and knowledge of the environment, I make informed development decisions and maintain responsibility for assigned tasks. Additionally, I educate both technical and non-technical team members on areas of my expertise and provide development-level support throughout the product lifecycle."
+            "I write detailed product specifications, designs, and technical manuals, and evaluate third-party products and specifications. Leveraging my experience and knowledge of the environment, I make informed development decisions and maintain responsibility for assigned tasks. Additionally, I educate both technical and non-technical team members on areas of my expertise and provide development-level support throughout the product lifecycle."
           ],
           "startDate": "2021-11-03",
           "currentJob": true,
@@ -36,8 +35,8 @@
         {
           "title": "Web Development Supervisor",
           "description": [
-            "Manages development of the presentation layer for UPS.com applications.", 
-            "I work with cross-functional teams and vendors to deliver web pages that are accurate, on time, and meet WCAG/brand standards.", 
+            "Manages development of the presentation layer for UPS.com applications.",
+            "I work with cross-functional teams and vendors to deliver web pages that are accurate, on time, and meet WCAG/brand standards.",
             "In this role I manage web development specialists as well as offshore resources."
           ],
           "startDate": "2019-03-01",
@@ -203,9 +202,8 @@
       "Description": "Concentration: Graphics and Human Computer Interaction",
       "SchoolImage": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Georgia_State_University_Logo.svg",
       "SchoolLink": "https://gsu.edu",
-      "Awards": [
-
-      ]
+      "Awards": []
     }
-  ]
+  ],
+  "About": "I am a passionate software engineer with a strong background in web development, specializing in creating dynamic and responsive user interfaces. With a keen eye for design and a love for problem-solving, I strive to deliver impactful solutions that enhance user experiences."
 }
