@@ -19,7 +19,7 @@
           "title": "Application Engineer",
           "description": [
             "I serve as the code owner of the Diners Club Globalnet application, where I've led significant modernization efforts. I'm responsible for all deployments and enhancements to this critical system, ensuring its continued evolution and optimal performance.",
-            "My role involves designing, implementing, and documenting software changes while providing extensive testing and support both internally and externally. I actively participate in analysis, design, testing, and review processes, providing accurate estimations of work based on requirements.",
+            "My role involves designing, implementing, and documenting software changes while providing extensive testing and support both internally and externally. I actively participate in analysis, design, testing, and review processes, providing accurate estimations of work based on requirements. ",
             "I write detailed product specifications, designs, and technical manuals, and evaluate third-party products and specifications. Leveraging my experience and knowledge of the environment, I make informed development decisions and maintain responsibility for assigned tasks. Additionally, I educate both technical and non-technical team members on areas of my expertise and provide development-level support throughout the product lifecycle."
           ],
           "startDate": "2025-02-15",
@@ -205,10 +205,18 @@
   ],
   "Projects": [
     {
-      "Name": "Demo Project 1",
-      "Description": "Demo",
+      "Name": "Personal Portfolio Website",
+      "Description": "A modern, responsive portfolio website built with React and Material-UI. Features include a dynamic experience timeline, skill visualization, project showcase, and contact form. The site implements modern UI practices like glass-morphism, subtle animations, and responsive design. Built using React 18, Material-UI v5, and styled-components for custom theming. Implements best practices in component architecture and responsive web design.",
       "ScreenShotURL": "./demo.svg",
-      "ProjectLink": "https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg"
+      "ProjectLink": "https://github.com/bplzizcool/brian-site",
+      "Technologies": [
+        "React",
+        "Material-UI",
+        "Styled Components",
+        "JavaScript",
+        "HTML5",
+        "CSS3"
+      ]
     }
   ],
   "Education": [

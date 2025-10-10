@@ -10,7 +10,7 @@ const StyledHeroBox = styled(Box)(({ theme }) => ({
     minHeight: '80vh',
     width: '100%',
     maxWidth: '100%',
-    padding: theme.spacing(12, 4),
+    padding: theme.spacing(18, 4),
     background: 'linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%)',
     borderRadius: theme.spacing(2),
     boxShadow: '0 10px 40px rgba(0,0,0,0.3)',
