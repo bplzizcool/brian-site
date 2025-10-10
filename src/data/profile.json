@@ -11,6 +11,24 @@
   ],
   "experiences": [
     {
+      "companyName": "Discover Financial Services",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Discover_Card_logo.svg/640px-Discover_Card_logo.svg.png",
+      "url": "https://www.discover.com/",
+      "roles": [
+        {
+          "title": "Application Engineer",
+          "description": [
+            "I serve as the code owner of the Diners Club Globalnet application, where I've led significant modernization efforts. I'm responsible for all deployments and enhancements to this critical system, ensuring its continued evolution and optimal performance.",
+            "My role involves designing, implementing, and documenting software changes while providing extensive testing and support both internally and externally. I actively participate in analysis, design, testing, and review processes, providing accurate estimations of work based on requirements.",
+            "I write detailed product specifications, designs, and technical manuals, and evaluate third-party products and specifications. Leveraging my experience and knowledge of the environment, I make informed development decisions and maintain responsibility for assigned tasks. Additionally, I educate both technical and non-technical team members on areas of my expertise and provide development-level support throughout the product lifecycle."
+          ],
+          "startDate": "2025-02-15",
+          "currentJob": true,
+          "location": "Atlanta, GA"
+        }
+      ]
+    },
+    {
       "companyName": "NCR Voyix",
       "logo": "https://upload.wikimedia.org/wikipedia/commons/a/a7/NCR_Voyix_logo.svg",
       "url": "https://www.ncrvoyix.com/",
@@ -22,7 +40,7 @@
             "I write detailed product specifications, designs, and technical manuals, and evaluate third-party products and specifications. Leveraging my experience and knowledge of the environment, I make informed development decisions and maintain responsibility for assigned tasks. Additionally, I educate both technical and non-technical team members on areas of my expertise and provide development-level support throughout the product lifecycle."
           ],
           "startDate": "2021-11-03",
-          "currentJob": true,
+          "endDate": "2025-02-01",
           "location": "Atlanta, GA"
         }
       ]

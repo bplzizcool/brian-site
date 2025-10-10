@@ -4,13 +4,14 @@ import { styled } from '@mui/material/styles';
 
 const StyledBox = styled(Box)(({ theme }) => ({
     minHeight: '100vh',
-    width: '100vw',
+    width: '100%',
     background: 'linear-gradient(135deg, #232526 0%, #414345 100%)',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'flex-start',
     paddingTop: theme.spacing(8),
+    overflow: 'hidden',
 }));
 const StyledContainer = styled(Container)(({ theme }) => ({
     background: 'rgba(255,255,255,0.04)',

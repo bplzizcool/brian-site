@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography, Grid, Card, CardContent, Box, Link, Avatar } from '@mui/material';
+import { Typography, Grid, Card, CardContent, Box, Link } from '@mui/material';
 import profile from '../../data/profile.json';
 import moment from 'moment';
 import { styled } from '@mui/material/styles';
@@ -16,6 +16,9 @@ const StyledExperienceCard = styled(Card)({
     border: '1px solid rgba(255,255,255,0.12)',
     padding: 8,
     transition: 'transform 0.2s',
+    height: '100%',
+    display: 'flex',
+    flexDirection: 'column',
     '&:hover': {
         transform: 'scale(1.03)',
         boxShadow: '0 8px 32px rgba(25, 118, 210, 0.18)',
@@ -31,29 +34,36 @@ const StyledHeader = styled(Typography)({
 const StyledCompany = styled(Typography)({
     fontWeight: 600,
     color: 'white',
-    marginLeft: 8,
+    textAlign: 'center',
 });
 
 const StyledDescription = styled(Typography)({
     color: 'rgba(255,255,255,0.85)',
 });
 
-const HeaderRow = styled(Box)({
+const StyledCardContent = styled(CardContent)({
     display: 'flex',
-    alignItems: 'center',
-    marginBottom: 16,
+    flexDirection: 'column',
+    height: '100%',
+    padding: '16px !important',
 });
 
-const StyledAvatar = styled(Avatar)({
-    width: 48,
-    height: 48,
-    marginRight: 16,
+const CompanyLogo = styled('img')({
+    width: '100%',
+    height: 'auto',
+    maxHeight: 60,
+    objectFit: 'contain',
+    marginBottom: 16,
     backgroundColor: 'white',
-    border: '2px solid #1976d2',
+    padding: '8px 16px',
+    borderRadius: 8,
 });
 
 const RoleBox = styled(Box)({
     marginBottom: 16,
+    '&:last-child': {
+        marginBottom: 0,
+    },
 });
 
 const RoleTitle = styled(Typography)({
@@ -64,6 +74,12 @@ const DateText = styled(Typography)({
     color: 'rgba(255,255,255,0.6)',
 });
 
+const StyledLink = styled(Link)({
+    width: '100%',
+    textAlign: 'center',
+    display: 'block',
+});
+
 const Experience = () => (
     <StyledExperienceBox>
         <StyledHeader variant="h4" gutterBottom>Experience</StyledHeader>
@@ -71,13 +87,17 @@ const Experience = () => (
             {profile.experiences && profile.experiences.map(exp => (
                 <Grid item xs={12} md={6} key={exp.companyName}>
                     <StyledExperienceCard>
-                        <CardContent>
-                            <HeaderRow>
-                                <Link href={exp.url} target="_blank" rel="noopener">
-                                    <StyledAvatar src={exp.logo} alt={exp.companyName} />
-                                </Link>
-                                <StyledCompany variant="h6">{exp.companyName}</StyledCompany>
-                            </HeaderRow>
+                        <StyledCardContent>
+                            <Box>
+                                <StyledLink
+                                    href={exp.url}
+                                    target="_blank"
+                                    rel="noopener"
+                                >
+                                    <CompanyLogo src={exp.logo} alt={exp.companyName} />
+                                </StyledLink>
+                                <StyledCompany variant="h6" gutterBottom>{exp.companyName}</StyledCompany>
+                            </Box>
                             {exp.roles.map(role => (
                                 <RoleBox key={role.title}>
                                     <RoleTitle variant="subtitle1" color="primary">{role.title}</RoleTitle>
@@ -87,7 +107,7 @@ const Experience = () => (
                                     <StyledDescription variant="body2">{role.description}</StyledDescription>
                                 </RoleBox>
                             ))}
-                        </CardContent>
+                        </StyledCardContent>
                     </StyledExperienceCard>
                 </Grid>
             ))}
