@@ -7,10 +7,10 @@ const StyledHeroBox = styled(Box)(({ theme }) => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    minHeight: '80vh',
+    minHeight: '70vh',
     width: '100%',
     maxWidth: '100%',
-    padding: theme.spacing(18, 4),
+    padding: theme.spacing(14, 4),
     background: 'linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%)',
     borderRadius: theme.spacing(2),
     boxShadow: '0 10px 40px rgba(0,0,0,0.3)',
@@ -67,7 +67,13 @@ const StyledPosition = styled(Typography)(({ theme }) => ({
     fontSize: '1.8rem',
     letterSpacing: 1,
     opacity: 0.9,
+    textAlign: 'center',
+    width: '100%',
+    padding: theme.spacing(0, 2),
     animation: 'slideUp 0.6s ease-out',
+    [theme.breakpoints.down('sm')]: {
+        fontSize: '1.5rem'
+    },
     '@keyframes slideUp': {
         from: {
             transform: 'translateY(20px)',
