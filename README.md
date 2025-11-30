@@ -1,9 +1,11 @@
 # Brian Lane's Portfolio Website
 
 ## Overview
+
 A modern, responsive portfolio website showcasing my professional experience, skills, and projects. Built with React and Material-UI, featuring a clean, intuitive design with glass-morphism effects and smooth animations.
 
 ## Features
+
 - 🎨 Modern UI with glass-morphism effects and subtle animations
 - 📱 Fully responsive design that works on all devices
 - 💼 Dynamic experience timeline
@@ -13,39 +15,50 @@ A modern, responsive portfolio website showcasing my professional experience, sk
 - 🎯 Performance optimized
 
 ## Tech Stack
+
 - **Frontend Framework**: React 18
 - **UI Library**: Material-UI v5
-- **Styling**: Styled Components
+- **Styling**: Styled Components & Material-UI System
 - **Animations**: Custom CSS animations
-- **Form Handling**: Formspree integration
+- **Form Handling**: Formspree + reCAPTCHA v3
+- **Form Validation**: Formik & Yup
+- **HTTP Client**: Axios
+- **Date Handling**: Moment.js
 - **Deployment**: GitHub Pages
+- **Build Tool**: Create React App
 
-## Getting Started
+## Key Highlights
 
-### 1. Set up local environment
-This app is bootstrapped with *create-react-app*, so you’ll need to have Node 8.10.0 or later on your local development machine. Install dependencies:
+### 🎨 Responsive Design
 
-```sh
-npm install
-```
+The website is fully responsive and optimized for desktop, tablet, and mobile devices using Material-UI's breakpoint system.
 
-Run the app:
+### ✉️ Contact Form
 
-```sh
-npm start
-```
+Secure contact form with:
 
-Now you should see the app running at http://localhost:3000
+- Real-time form validation
+- reCAPTCHA v3 integration for spam protection
+- Formspree backend for email delivery
 
+### 🎯 Component Architecture
 
-### 2. Publish website
-Currently, this site is published through GitHub Pages. To host your website with GitHub, edit the website path in [`brian-site/package.json`](brian-site/package.json). This will normally be `https://[your account].github.io/[repo name]/`.
+Built with reusable, well-organized components for maintainability and scalability.
 
-Publish:
+## Performance Optimizations
 
-```sh
-npm run deploy
-```
+- Lazy loading of images
+- CSS-in-JS optimization with Material-UI
+- Optimized bundle size through tree-shaking
+- Responsive image handling
 
-## Credit
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and [gh-pages](https://github.com/tschaub/gh-pages).
+## Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+
+## License
+
+This project is open source and available under the MIT License.
