@@ -1,19 +1,13 @@
 import React from 'react';
-import { Typography, Grid, Card, CardContent, Box, Link } from '@mui/material';
+import { Grid, Link } from '@mui/material';
 import profile from '../../data/profile.json';
 import moment from 'moment';
 import { styled } from '@mui/material/styles';
+import { StyledHeader, StyledBox } from '../Shared/StyledComponents';
+import StyledCard from '../Shared/StyledCard';
+import { StyledCompany } from '../Shared/StyledTypography';
 
-const StyledExperienceBox = styled(Box)({
-    paddingTop: 32,
-    paddingBottom: 32,
-});
-
-const StyledExperienceCard = styled(Card)({
-    background: 'rgba(255,255,255,0.08)',
-    boxShadow: '0 4px 24px rgba(25, 118, 210, 0.12)',
-    borderRadius: 12,
-    border: '1px solid rgba(255,255,255,0.12)',
+const StyledExperienceCard = styled(StyledCard)({
     padding: 8,
     transition: 'transform 0.2s',
     height: '100%',
@@ -25,23 +19,11 @@ const StyledExperienceCard = styled(Card)({
     },
 });
 
-const StyledHeader = styled(Typography)({
-    fontWeight: 700,
-    color: 'white',
-    letterSpacing: 1,
-});
-
-const StyledCompany = styled(Typography)({
-    fontWeight: 600,
-    color: 'white',
-    textAlign: 'center',
-});
-
-const StyledDescription = styled(Typography)({
+const StyledDescription = styled('div')({
     color: 'rgba(255,255,255,0.85)',
 });
 
-const StyledCardContent = styled(CardContent)({
+const StyledCardContent = styled('div')({
     display: 'flex',
     flexDirection: 'column',
     height: '100%',
@@ -59,18 +41,18 @@ const CompanyLogo = styled('img')({
     borderRadius: 8,
 });
 
-const RoleBox = styled(Box)({
+const RoleBox = styled('div')({
     marginBottom: 16,
     '&:last-child': {
         marginBottom: 0,
     },
 });
 
-const RoleTitle = styled(Typography)({
+const RoleTitle = styled('div')({
     fontWeight: 600,
 });
 
-const DateText = styled(Typography)({
+const DateText = styled('div')({
     color: 'rgba(255,255,255,0.6)',
 });
 
@@ -81,14 +63,14 @@ const StyledLink = styled(Link)({
 });
 
 const Experience = () => (
-    <StyledExperienceBox>
+    <StyledBox>
         <StyledHeader variant="h4" gutterBottom>Experience</StyledHeader>
         <Grid container spacing={2}>
             {profile.experiences && profile.experiences.map(exp => (
                 <Grid item xs={12} md={6} key={exp.companyName}>
                     <StyledExperienceCard>
                         <StyledCardContent>
-                            <Box>
+                            <div>
                                 <StyledLink
                                     href={exp.url}
                                     target="_blank"
@@ -97,7 +79,7 @@ const Experience = () => (
                                     <CompanyLogo src={exp.logo} alt={exp.companyName} />
                                 </StyledLink>
                                 <StyledCompany variant="h6" gutterBottom>{exp.companyName}</StyledCompany>
-                            </Box>
+                            </div>
                             {exp.roles.map(role => (
                                 <RoleBox key={role.title}>
                                     <RoleTitle variant="subtitle1" color="primary">{role.title}</RoleTitle>
@@ -112,7 +94,7 @@ const Experience = () => (
                 </Grid>
             ))}
         </Grid>
-    </StyledExperienceBox>
+    </StyledBox>
 );
 
 export default Experience;

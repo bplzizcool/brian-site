@@ -1,18 +1,9 @@
 import React from 'react';
-import { Typography, Box } from '@mui/material';
-import { styled } from '@mui/material/styles';
+import { StyledAreaTitle } from '../Shared/StyledTypography';
+import { StyledBox } from '../Shared/StyledComponents';
 import profile from '../../data/profile.json';
-
-const StyledAboutBox = styled(Box)({
-    paddingTop: 32,
-    paddingBottom: 32,
-});
-
-const StyledHeader = styled(Typography)({
-    fontWeight: 700,
-    color: 'white',
-    letterSpacing: 1,
-});
+import { Typography } from '@mui/material';
+import { styled } from '@mui/system';
 
 const StyledBody = styled(Typography)({
     color: 'rgba(255,255,255,0.85)',
@@ -20,10 +11,10 @@ const StyledBody = styled(Typography)({
 });
 
 const About = () => (
-    <StyledAboutBox>
-        <StyledHeader variant="h4" gutterBottom>About Me</StyledHeader>
+    <StyledBox>
+        <StyledAreaTitle variant="h4" gutterBottom>About Me</StyledAreaTitle>
         <StyledBody variant="body1">{profile.About}</StyledBody>
-    </StyledAboutBox>
+    </StyledBox>
 );
 
 export default About;

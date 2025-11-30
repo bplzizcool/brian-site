@@ -1,9 +1,11 @@
 import React from 'react';
-import { Typography, Box, Avatar } from '@mui/material';
+import { Avatar } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import profile from '../../data/profile.json';
+import { StyledHeader, StyledBox } from '../Shared/StyledComponents';
+import StyledCard from '../Shared/StyledCard';
 
-const StyledHeroBox = styled(Box)(({ theme }) => ({
+const StyledHeroBox = styled(StyledCard)(({ theme }) => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -42,7 +44,7 @@ const StyledAvatar = styled(Avatar)(({ theme }) => ({
     }
 }));
 
-const StyledName = styled(Typography)(({ theme }) => ({
+const StyledName = styled(StyledHeader)(({ theme }) => ({
     fontWeight: 800,
     letterSpacing: 2,
     color: 'white',
@@ -60,7 +62,7 @@ const StyledName = styled(Typography)(({ theme }) => ({
     }
 }));
 
-const StyledPosition = styled(Typography)(({ theme }) => ({
+const StyledPosition = styled(StyledHeader)(({ theme }) => ({
     fontWeight: 600,
     color: theme.palette.primary.light,
     marginBottom: theme.spacing(3),
@@ -86,7 +88,7 @@ const StyledPosition = styled(Typography)(({ theme }) => ({
     }
 }));
 
-const StyledDescription = styled(Typography)(({ theme }) => ({
+const StyledDescription = styled(StyledHeader)(({ theme }) => ({
     marginTop: theme.spacing(3),
     color: 'rgba(255,255,255,0.9)',
     fontSize: 20,
@@ -102,7 +104,7 @@ const StyledDescription = styled(Typography)(({ theme }) => ({
     }
 }));
 
-const StyledDetails = styled(Typography)(({ theme }) => ({
+const StyledDetails = styled(StyledHeader)(({ theme }) => ({
     color: 'rgba(255,255,255,0.85)',
     fontSize: 16,
     margin: theme.spacing(0.5),
@@ -117,7 +119,7 @@ const StyledDetails = styled(Typography)(({ theme }) => ({
     }
 }));
 
-const StyledDetailsContainer = styled(Box)(({ theme }) => ({
+const StyledDetailsContainer = styled(StyledBox)(({ theme }) => ({
     marginTop: theme.spacing(4),
     display: 'flex',
     flexDirection: 'column',

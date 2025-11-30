@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Typography, Box, IconButton, TextField, Button, Snackbar, Alert, CircularProgress } from '@mui/material';
+import { Typography, IconButton, TextField, Button, Snackbar, Alert, CircularProgress, Box } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
@@ -9,11 +9,15 @@ import { styled } from '@mui/material/styles';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
+import { StyledHeader } from '../Shared/StyledComponents';
 
 const StyledContactBox = styled(Box)({
     paddingTop: 32,
     paddingBottom: 32,
     textAlign: 'center',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
 });
 
 const StyledIconButton = styled(IconButton)({
@@ -29,12 +33,6 @@ const StyledIconButton = styled(IconButton)({
     },
 });
 
-const StyledHeader = styled(Typography)({
-    fontWeight: 700,
-    color: 'white',
-    letterSpacing: 1,
-});
-
 const StyledEmail = styled(Typography)({
     color: 'rgba(255,255,255,0.85)',
     fontSize: 18,
@@ -45,6 +43,9 @@ const StyledForm = styled('form')({
     maxWidth: 500,
     margin: '0 auto',
     marginTop: 24,
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
 });
 
 const StyledTextField = styled(TextField)({
