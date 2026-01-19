@@ -3,7 +3,7 @@
   "Position": "Application Engineer",
   "Description": "Coding, Creativity, and a Passion for Spaceflight",
   "Address": "Atlanta, GA",
-  "Company": "Discover Financial Services",
+  "Company": "Capital One",
   "School": "Georgia State University",
   "SocialMedias": [
     "https://github.com/bplzizcool",
@@ -11,9 +11,9 @@
   ],
   "experiences": [
     {
-      "companyName": "Discover Financial Services",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Discover_Card_logo.svg/640px-Discover_Card_logo.svg.png",
-      "url": "https://www.discover.com/",
+      "companyName": "Capital One",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/9/98/Capital_One_logo.svg",
+      "url": "https://www.capitalone.com/",
       "roles": [
         {
           "title": "Application Engineer",
