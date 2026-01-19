@@ -65,9 +65,22 @@ const StyledLink = styled(Link)({
 const Experience = () => (
     <StyledBox>
         <StyledHeader variant="h4" gutterBottom>Experience</StyledHeader>
-        <Grid container spacing={2}>
+        <Grid
+            container
+            spacing={2}
+            sx={{
+                display: 'grid',
+                gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' },
+                gap: 2
+            }}
+        >
             {profile.experiences && profile.experiences.map(exp => (
-                <Grid item xs={12} md={6} key={exp.companyName}>
+                <Grid
+                    key={exp.companyName}
+                    sx={{
+                        display: 'flex'
+                    }}
+                >
                     <StyledExperienceCard>
                         <StyledCardContent>
                             <div>

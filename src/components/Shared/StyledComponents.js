@@ -10,4 +10,5 @@ export const StyledHeader = styled(Typography)({
 export const StyledBox = styled(Box)({
     paddingTop: 32,
     paddingBottom: 32,
+    width: '100%',
 });
