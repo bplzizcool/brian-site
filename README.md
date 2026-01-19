@@ -16,16 +16,17 @@ A modern, responsive portfolio website showcasing my professional experience, sk
 
 ## Tech Stack
 
-- **Frontend Framework**: React 18
-- **UI Library**: Material-UI v5
+- **Frontend Framework**: React 19
+- **UI Library**: Material-UI v7
 - **Styling**: Styled Components & Material-UI System
+- **CSS Framework**: Bootstrap 5
 - **Animations**: Custom CSS animations
 - **Form Handling**: Formspree + reCAPTCHA v3
 - **Form Validation**: Formik & Yup
 - **HTTP Client**: Axios
 - **Date Handling**: Moment.js
-- **Deployment**: GitHub Pages
-- **Build Tool**: Create React App
+- **Deployment**: GitHub Pages with automated CI/CD
+- **Build Tool**: Create React App with react-scripts
 
 ## Key Highlights
 

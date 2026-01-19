@@ -206,16 +206,20 @@
   "Projects": [
     {
       "Name": "Personal Portfolio Website",
-      "Description": "A modern, responsive portfolio website built with React and Material-UI. Features include a dynamic experience timeline, skill visualization, project showcase, and contact form. The site implements modern UI practices like glass-morphism, subtle animations, and responsive design. Built using React 18, Material-UI v5, and styled-components for custom theming. Implements best practices in component architecture and responsive web design.",
+      "Description": "A modern, responsive portfolio website built with React 19 and Material-UI v7. Features include a dynamic experience timeline, skill visualization, project showcase, and responsive contact form. The site implements modern UI practices like glass-morphism, subtle animations, and CSS Grid layouts. Built with styled-components and Material-UI System for custom theming, featuring optimized performance, zero security vulnerabilities, and automated deployment to GitHub Pages via CI/CD workflow.",
       "ScreenShotURL": "./demo.svg",
       "ProjectLink": "https://github.com/bplzizcool/brian-site",
       "Technologies": [
-        "React",
-        "Material-UI",
+        "React 19",
+        "Material-UI v7",
         "Styled Components",
+        "Bootstrap 5",
         "JavaScript",
         "HTML5",
-        "CSS3"
+        "CSS3",
+        "Formik",
+        "Yup",
+        "GitHub Actions"
       ]
     }
   ],
