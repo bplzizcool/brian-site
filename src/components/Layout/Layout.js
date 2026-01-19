@@ -13,6 +13,7 @@ const StyledBox = styled(Box)(({ theme }) => ({
     justifyContent: 'flex-start',
     paddingTop: theme.spacing(8),
     overflow: 'hidden',
+    paddingBottom: theme.spacing(8),
 }));
 
 const StyledParticlesBackground = styled(Box)(({ theme }) => ({

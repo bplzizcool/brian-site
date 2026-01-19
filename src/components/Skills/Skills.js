@@ -23,20 +23,15 @@ const Skills = () => (
         <StyledHeader variant="h4" gutterBottom>Skills</StyledHeader>
         <Grid container spacing={2}>
             {profile.Skills && profile.Skills.map(skill => (
-                <Grid item xs={12} md={6} key={skill.Area}>
+                <Grid container size={6} key={skill.Area}>
                     <StyledCard>
                         <StyledAreaTitle variant="h6">{skill.Area}</StyledAreaTitle>
                         <StyledChipContainer>
-                            {skill.SkillSet.map(s => s.Hot ? (
+                            {skill.SkillSet.map(s => (
                                 <TechChip
                                     label={s.Name}
                                     key={s.Name}
-                                    hot
-                                />
-                            ) : (
-                                <TechChip
-                                    label={s.Name}
-                                    key={s.Name}
+                                    hot={s.Hot ? "true" : "false"}
                                 />
                             ))}
                         </StyledChipContainer>
