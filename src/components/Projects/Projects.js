@@ -37,7 +37,7 @@ const Projects = () => (
         <StyledHeader variant="h4">Projects</StyledHeader>
         <Grid container spacing={3}>
             {profile.Projects && profile.Projects.map(project => (
-                <Grid item xs={12} key={project.Name}>
+                <Grid size={12} key={project.Name}>
                     <StyledCard>
                         <CardContent>
                             <StyledProjectName variant="h6">{project.Name}</StyledProjectName>

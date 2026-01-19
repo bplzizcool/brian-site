@@ -85,120 +85,296 @@
   ],
   "Skills": [
     {
-      "Area": "Programming Languages",
+      "Area": "Frontend Development",
       "SkillSet": [
         {
           "Name": "React",
           "Hot": true
         },
         {
-          "Name": "JavaScript",
-          "Hot": true
-        },
-        {
-          "Name": "Angular",
-          "Hot": false
-        },
-        {
-          "Name": "Golang",
-          "Hot": false
-        }
-      ]
-    },
-    {
-      "Area": "Web-Based Application Development",
-      "SkillSet": [
-        {
-          "Name": "JavaScript (ES5, ES6)",
+          "Name": "React 19",
           "Hot": true
         },
         {
           "Name": "TypeScript",
-          "Hot": false
+          "Hot": true
+        },
+        {
+          "Name": "Next.js",
+          "Hot": true
+        },
+        {
+          "Name": "Material-UI",
+          "Hot": true
+        },
+        {
+          "Name": "Styled Components",
+          "Hot": true
+        },
+        {
+          "Name": "Tailwind CSS",
+          "Hot": true
         },
         {
           "Name": "HTML5",
           "Hot": true
         },
         {
-          "Name": "CSS (SCSS/SASS)",
+          "Name": "CSS3/SCSS/SASS",
+          "Hot": true
+        }
+      ]
+    },
+    {
+      "Area": "JavaScript & Frameworks",
+      "SkillSet": [
+        {
+          "Name": "JavaScript (ES5, ES6+)",
           "Hot": true
         },
         {
-          "Name": "React",
+          "Name": "TypeScript",
           "Hot": true
         },
+        {
+          "Name": "Node.js",
+          "Hot": true
+        },
+        {
+          "Name": "Express.js",
+          "Hot": true
+        },
+        {
+          "Name": "Vue.js",
+          "Hot": false
+        },
+        {
+          "Name": "Angular",
+          "Hot": false
+        }
+      ]
+    },
+    {
+      "Area": "State Management & Forms",
+      "SkillSet": [
         {
           "Name": "Redux",
+          "Hot": true
+        },
+        {
+          "Name": "Context API",
+          "Hot": true
+        },
+        {
+          "Name": "Formik",
+          "Hot": true
+        },
+        {
+          "Name": "Yup",
+          "Hot": true
+        },
+        {
+          "Name": "Zustand",
           "Hot": false
         },
         {
-          "Name": "JQuery",
-          "Hot": false
-        },
-        {
-          "Name": "NPM",
+          "Name": "Recoil",
           "Hot": false
         }
       ]
     },
     {
-      "Area": "Database",
+      "Area": "Testing & Quality",
       "SkillSet": [
+        {
+          "Name": "Jest",
+          "Hot": true
+        },
+        {
+          "Name": "React Testing Library",
+          "Hot": true
+        },
+        {
+          "Name": "Cypress",
+          "Hot": true
+        },
+        {
+          "Name": "Unit Testing",
+          "Hot": true
+        },
+        {
+          "Name": "Integration Testing",
+          "Hot": true
+        },
+        {
+          "Name": "E2E Testing",
+          "Hot": true
+        }
+      ]
+    },
+    {
+      "Area": "Backend & APIs",
+      "SkillSet": [
+        {
+          "Name": "RESTful APIs",
+          "Hot": true
+        },
+        {
+          "Name": "GraphQL",
+          "Hot": true
+        },
+        {
+          "Name": "Axios",
+          "Hot": true
+        },
+        {
+          "Name": "Fetch API",
+          "Hot": true
+        },
+        {
+          "Name": "API Design",
+          "Hot": true
+        },
+        {
+          "Name": "Microservices",
+          "Hot": false
+        }
+      ]
+    },
+    {
+      "Area": "Database & Data",
+      "SkillSet": [
+        {
+          "Name": "PostgreSQL",
+          "Hot": true
+        },
+        {
+          "Name": "MongoDB",
+          "Hot": true
+        },
+        {
+          "Name": "SQL",
+          "Hot": true
+        },
         {
           "Name": "Google Cloud Platform",
+          "Hot": true
+        },
+        {
+          "Name": "Firebase",
+          "Hot": false
+        },
+        {
+          "Name": "Redis",
           "Hot": false
         }
       ]
     },
     {
-      "Area": "Platforms",
+      "Area": "DevOps & CI/CD",
       "SkillSet": [
         {
-          "Name": "Windows",
-          "Hot": false
-        },
-        {
-          "Name": "Unix/Linux",
+          "Name": "GitHub Actions",
           "Hot": true
         },
         {
-          "Name": "Mac OS",
-          "Hot": true
-        }
-      ]
-    },
-    {
-      "Area": "Test Driven Development",
-      "SkillSet": [
-        {
-          "Name": "Cypress Io",
+          "Name": "Docker",
           "Hot": true
         },
-        {
-          "Name": "JEST/Junit",
-          "Hot": true
-        }
-      ]
-    },
-    {
-      "Area": "Software Development Tools and Concepts",
-      "SkillSet": [
         {
           "Name": "GitHub",
           "Hot": true
         },
         {
-          "Name": "Docker",
+          "Name": "Kubernetes",
           "Hot": false
         },
         {
-          "Name": "Agile",
+          "Name": "GitLab CI",
+          "Hot": false
+        },
+        {
+          "Name": "Jenkins",
+          "Hot": false
+        }
+      ]
+    },
+    {
+      "Area": "Cloud & Infrastructure",
+      "SkillSet": [
+        {
+          "Name": "AWS",
           "Hot": true
         },
         {
-          "Name": "UX/UI Design",
+          "Name": "Google Cloud",
+          "Hot": true
+        },
+        {
+          "Name": "Azure",
           "Hot": false
+        },
+        {
+          "Name": "Docker",
+          "Hot": true
+        },
+        {
+          "Name": "Kubernetes",
+          "Hot": false
+        }
+      ]
+    },
+    {
+      "Area": "Development Tools & Platforms",
+      "SkillSet": [
+        {
+          "Name": "Git/GitHub",
+          "Hot": true
+        },
+        {
+          "Name": "NPM/Yarn",
+          "Hot": true
+        },
+        {
+          "Name": "Webpack",
+          "Hot": true
+        },
+        {
+          "Name": "Vite",
+          "Hot": true
+        },
+        {
+          "Name": "VS Code",
+          "Hot": true
+        },
+        {
+          "Name": "Linux/Unix",
+          "Hot": true
+        }
+      ]
+    },
+    {
+      "Area": "Performance & Architecture",
+      "SkillSet": [
+        {
+          "Name": "Performance Optimization",
+          "Hot": true
+        },
+        {
+          "Name": "Web Accessibility (WCAG)",
+          "Hot": true
+        },
+        {
+          "Name": "Responsive Design",
+          "Hot": true
+        },
+        {
+          "Name": "Progressive Web Apps",
+          "Hot": false
+        },
+        {
+          "Name": "Scalability",
+          "Hot": true
         }
       ]
     }

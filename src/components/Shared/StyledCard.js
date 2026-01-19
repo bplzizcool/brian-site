@@ -2,6 +2,7 @@ import { styled } from '@mui/material/styles';
 import { Card } from '@mui/material';
 
 const StyledCard = styled(Card)(({ theme }) => ({
+    width: '100%',
     background: 'rgba(255,255,255,0.08)',
     boxShadow: '0 4px 24px rgba(25, 118, 210, 0.12)',
     borderRadius: 12,
