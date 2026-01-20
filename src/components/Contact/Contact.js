@@ -105,16 +105,16 @@ const Contact = () => {
     useEffect(() => {
         // Use site key from environment variable or window object
         const siteKey = RECAPTCHA_SITE_KEY || window.RECAPTCHA_SITE_KEY;
-        
+
         if (!siteKey) {
             console.warn('reCAPTCHA site key not configured');
             return;
         }
-        
+
         if (window.grecaptcha) {
             return; // Script already loaded
         }
-        
+
         const script = document.createElement('script');
         script.src = `https://www.google.com/recaptcha/api.js?render=${siteKey}`;
         script.async = true;
@@ -156,7 +156,7 @@ const Contact = () => {
                 }
 
                 const siteKey = RECAPTCHA_SITE_KEY || window.RECAPTCHA_SITE_KEY;
-                
+
                 const recaptchaValue = await new Promise((resolve, reject) => {
                     const timeout = setTimeout(() => {
                         reject(new Error('reCAPTCHA request timed out'));
