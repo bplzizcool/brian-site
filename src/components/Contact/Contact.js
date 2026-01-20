@@ -97,8 +97,8 @@ const Contact = () => {
         message: '',
         severity: 'success'
     });
-    // Get configuration from environment variables
-    const FORMSPREE_ID = process.env.REACT_APP_FORMSPREE_ID;
+    // Get configuration from environment variables or window object
+    const FORMSPREE_ID = process.env.REACT_APP_FORMSPREE_ID || window.FORMSPREE_ID;
     const RECAPTCHA_SITE_KEY = process.env.REACT_APP_RECAPTCHA_SITE_KEY;
 
     // Load reCAPTCHA script dynamically on component mount
@@ -178,6 +178,10 @@ const Contact = () => {
                 });
 
                 // Send to Formspree
+                if (!FORMSPREE_ID || FORMSPREE_ID === 'YOUR_FORMSPREE_ID_HERE') {
+                    throw new Error('Formspree ID not configured. Please set REACT_APP_FORMSPREE_ID in your environment.');
+                }
+
                 // Prepare form data
                 const formData = new FormData();
                 formData.append('name', values.name);
