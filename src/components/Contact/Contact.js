@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Typography, IconButton, TextField, Button, Snackbar, Alert, CircularProgress, Box } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -101,6 +101,17 @@ const Contact = () => {
     const FORMSPREE_ID = process.env.REACT_APP_FORMSPREE_ID;
     const RECAPTCHA_SITE_KEY = process.env.REACT_APP_RECAPTCHA_SITE_KEY;
 
+    // Load reCAPTCHA script dynamically on component mount
+    useEffect(() => {
+        if (RECAPTCHA_SITE_KEY && !window.grecaptcha) {
+            const script = document.createElement('script');
+            script.src = `https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_SITE_KEY}`;
+            script.async = true;
+            script.defer = true;
+            document.head.appendChild(script);
+        }
+    }, [RECAPTCHA_SITE_KEY]);
+
     const validationSchema = Yup.object({
         name: Yup.string()
             .required('Name is required')
@@ -126,17 +137,23 @@ const Contact = () => {
             try {
                 // Execute reCAPTCHA v3
                 if (!window.grecaptcha) {
-                    throw new Error('reCAPTCHA not loaded');
+                    throw new Error('reCAPTCHA not loaded. Please refresh the page and try again.');
                 }
 
                 const recaptchaValue = await new Promise((resolve, reject) => {
+                    const timeout = setTimeout(() => {
+                        reject(new Error('reCAPTCHA request timed out'));
+                    }, 10000);
+
                     window.grecaptcha.ready(async () => {
                         try {
                             const token = await window.grecaptcha.execute(RECAPTCHA_SITE_KEY, {
                                 action: 'submit'
                             });
+                            clearTimeout(timeout);
                             resolve(token);
                         } catch (error) {
+                            clearTimeout(timeout);
                             console.error('reCAPTCHA execution error:', error);
                             reject(error);
                         }
