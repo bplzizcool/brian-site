@@ -131,15 +131,39 @@ const StyledDetailsContainer = styled(StyledBox)(({ theme }) => ({
 }));
 
 const Hero = () => (
-    <StyledHeroBox>
-        <StyledAvatar src={require('../../img/profile_pic.jpg')} alt={profile.Name} />
-        <StyledName variant="h2" component="h1" gutterBottom>{profile.Name}</StyledName>
-        <StyledPosition variant="h5">{profile.Position}</StyledPosition>
-        <StyledDescription variant="body1">{profile.Description}</StyledDescription>
-        <StyledDetailsContainer>
-            <StyledDetails>{profile.Company}</StyledDetails>
-            <StyledDetails>{profile.School}</StyledDetails>
-            <StyledDetails>{profile.Address}</StyledDetails>
+    <StyledHeroBox role="region" aria-label="Hero introduction section">
+        <StyledAvatar
+            src={require('../../img/profile_pic.jpg')}
+            alt={`${profile.Name} - Professional profile picture`}
+            aria-label={`Profile photo of ${profile.Name}`}
+        />
+        <StyledName
+            variant="h2"
+            component="h1"
+            gutterBottom
+            id="hero-name"
+        >
+            {profile.Name}
+        </StyledName>
+        <StyledPosition
+            id="hero-position"
+            aria-describedby="hero-description"
+        >
+            {profile.Position}
+        </StyledPosition>
+        <StyledDescription
+            variant="body1"
+            id="hero-description"
+        >
+            {profile.Description}
+        </StyledDescription>
+        <StyledDetailsContainer
+            role="list"
+            aria-label="Professional details"
+        >
+            <StyledDetails role="listitem" aria-label="Company">{profile.Company}</StyledDetails>
+            <StyledDetails role="listitem" aria-label="School or education">{profile.School}</StyledDetails>
+            <StyledDetails role="listitem" aria-label="Location or address">{profile.Address}</StyledDetails>
         </StyledDetailsContainer>
     </StyledHeroBox>
 );

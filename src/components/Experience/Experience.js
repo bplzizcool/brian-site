@@ -63,8 +63,8 @@ const StyledLink = styled(Link)({
 });
 
 const Experience = () => (
-    <StyledBox>
-        <StyledHeader variant="h4" gutterBottom>Experience</StyledHeader>
+    <StyledBox role="region" aria-labelledby="experience-heading">
+        <StyledHeader variant="h4" component="h2" gutterBottom id="experience-heading">Experience</StyledHeader>
         <Grid
             container
             spacing={2}
@@ -73,6 +73,8 @@ const Experience = () => (
                 gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' },
                 gap: 2
             }}
+            role="list"
+            aria-label="Work experience"
         >
             {profile.experiences && profile.experiences.map(exp => (
                 <Grid
@@ -80,28 +82,44 @@ const Experience = () => (
                     sx={{
                         display: 'flex'
                     }}
+                    role="listitem"
                 >
-                    <StyledExperienceCard>
+                    <StyledExperienceCard
+                        aria-labelledby={`company-${exp.companyName}`}
+                        aria-describedby={`company-roles-${exp.companyName}`}
+                    >
                         <StyledCardContent>
                             <div>
                                 <StyledLink
                                     href={exp.url}
                                     target="_blank"
-                                    rel="noopener"
+                                    rel="noopener noreferrer"
+                                    aria-label={`Visit ${exp.companyName} website`}
                                 >
-                                    <CompanyLogo src={exp.logo} alt={exp.companyName} />
+                                    <CompanyLogo
+                                        src={exp.logo}
+                                        alt={`${exp.companyName} company logo`}
+                                    />
                                 </StyledLink>
-                                <StyledCompany variant="h6" gutterBottom>{exp.companyName}</StyledCompany>
+                                <StyledCompany
+                                    variant="h6"
+                                    gutterBottom
+                                    id={`company-${exp.companyName}`}
+                                >
+                                    {exp.companyName}
+                                </StyledCompany>
                             </div>
-                            {exp.roles.map(role => (
-                                <RoleBox key={role.title}>
-                                    <RoleTitle variant="subtitle1" color="primary">{role.title}</RoleTitle>
-                                    <DateText variant="body2">
-                                        {moment(role.startDate).format('MMM YYYY')} - {role.currentJob ? 'Present' : moment(role.endDate).format('MMM YYYY')}
-                                    </DateText>
-                                    <StyledDescription variant="body2">{role.description}</StyledDescription>
-                                </RoleBox>
-                            ))}
+                            <div id={`company-roles-${exp.companyName}`}>
+                                {exp.roles.map(role => (
+                                    <RoleBox key={role.title}>
+                                        <RoleTitle variant="subtitle1" color="primary">{role.title}</RoleTitle>
+                                        <DateText variant="body2" aria-label={`Duration: ${moment(role.startDate).format('MMM YYYY')} to ${role.currentJob ? 'Present' : moment(role.endDate).format('MMM YYYY')}`}>
+                                            {moment(role.startDate).format('MMM YYYY')} - {role.currentJob ? 'Present' : moment(role.endDate).format('MMM YYYY')}
+                                        </DateText>
+                                        <StyledDescription variant="body2">{role.description}</StyledDescription>
+                                    </RoleBox>
+                                ))}
+                            </div>
                         </StyledCardContent>
                     </StyledExperienceCard>
                 </Grid>

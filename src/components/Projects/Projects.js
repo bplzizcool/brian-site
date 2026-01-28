@@ -33,19 +33,52 @@ const StyledProjectButton = styled(Button)({
 });
 
 const Projects = () => (
-    <StyledBox>
-        <StyledHeader variant="h4">Projects</StyledHeader>
-        <Grid container spacing={3}>
-            {profile.Projects && profile.Projects.map(project => (
-                <Grid size={12} key={project.Name}>
-                    <StyledCard>
+    <StyledBox role="region" aria-labelledby="projects-heading">
+        <StyledHeader variant="h4" component="h2" id="projects-heading">Projects</StyledHeader>
+        <Grid
+            container
+            spacing={3}
+            role="list"
+            aria-label="Portfolio projects"
+        >
+            {profile.Projects && profile.Projects.map((project, index) => (
+                <Grid
+                    size={12}
+                    key={project.Name}
+                    role="listitem"
+                >
+                    <StyledCard
+                        aria-labelledby={`project-name-${index}`}
+                        aria-describedby={`project-desc-${index}`}
+                    >
                         <CardContent>
-                            <StyledProjectName variant="h6">{project.Name}</StyledProjectName>
-                            <StyledDescription variant="body2">{project.Description}</StyledDescription>
+                            <StyledProjectName
+                                variant="h6"
+                                id={`project-name-${index}`}
+                            >
+                                {project.Name}
+                            </StyledProjectName>
+                            <StyledDescription
+                                variant="body2"
+                                id={`project-desc-${index}`}
+                            >
+                                {project.Description}
+                            </StyledDescription>
                             {project.Technologies && (
-                                <TechContainer>
-                                    {project.Technologies.map((tech, index) => (
-                                        <TechChip key={index}>{tech}</TechChip>
+                                <TechContainer
+                                    role="list"
+                                    aria-label={`Technologies used in ${project.Name}`}
+                                >
+                                    {project.Technologies.map((tech, idx) => (
+                                        <div
+                                            key={idx}
+                                            role="listitem"
+                                            style={{ display: 'inline-block' }}
+                                        >
+                                            <TechChip aria-label={`Technology: ${tech}`}>
+                                                {tech}
+                                            </TechChip>
+                                        </div>
                                     ))}
                                 </TechContainer>
                             )}
@@ -56,7 +89,9 @@ const Projects = () => (
                                 color="primary"
                                 href={project.ProjectLink}
                                 target="_blank"
+                                rel="noopener noreferrer"
                                 variant="contained"
+                                aria-label={`View source code for ${project.Name} project`}
                             >
                                 View Source
                             </StyledProjectButton>

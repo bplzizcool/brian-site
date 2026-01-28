@@ -8,6 +8,16 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Brian Lanes - Full Stack Developer Portfolio. Showcasing projects, experience, and technical skills."
+    />
+    <meta
+      name="keywords"
+      content="developer, portfolio, web development, full stack"
+    />
+    <meta name="author" content="Brian Lanes" />
+    <meta name="color-scheme" content="dark" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -25,13 +35,25 @@
     <title>Brian Lanes Portfolio</title>
     <script>
       // Initialize reCAPTCHA site key and Formspree ID
-      window.RECAPTCHA_SITE_KEY = '6LfcyuUrAAAAAORoJTpwwYPxKQNbj009qWSOnKM7';
-      window.FORMSPREE_ID = 'xeorrrel';
+      window.RECAPTCHA_SITE_KEY = "6LfcyuUrAAAAAORoJTpwwYPxKQNbj009qWSOnKM7";
+      window.FORMSPREE_ID = "xeorrrel";
     </script>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <noscript>
+      <div role="alert">
+        <h1>JavaScript Required</h1>
+        <p>
+          You need to enable JavaScript to run this app. If you have disabled
+          JavaScript in your browser, please enable it and try again.
+        </p>
+      </div>
+    </noscript>
+    <div
+      id="root"
+      role="application"
+      aria-label="Main application content"
+    ></div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.

@@ -43,9 +43,26 @@ const StyledDivWrapper = styled('div')`
     z-index: 1;
 `;
 
+const SkipLink = styled('a')({
+    position: 'absolute',
+    top: '-40px',
+    left: 0,
+    backgroundColor: '#1976d2',
+    color: 'white',
+    padding: '8px',
+    zIndex: 100,
+    '&:focus': {
+        top: 0,
+    },
+});
+
 const Layout = ({ children }) => (
     <StyledBox>
-        <StyledParticlesBackground>
+        <SkipLink href="#main-content">Skip to main content</SkipLink>
+        <StyledParticlesBackground
+            aria-hidden="true"
+            role="presentation"
+        >
             <Particles
                 particleColors={["#ffffff"]}
                 particleCount={200}
@@ -59,7 +76,7 @@ const Layout = ({ children }) => (
             />
         </StyledParticlesBackground>
         <StyledDivWrapper>
-            <StyledContainer maxWidth="md">
+            <StyledContainer maxWidth="md" id="main-content">
                 {children}
             </StyledContainer>
         </StyledDivWrapper>

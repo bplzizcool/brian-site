@@ -9,12 +9,14 @@ import Contact from './components/Contact/Contact';
 
 const App = () => (
     <Layout>
-        <Hero />
-        <About />
-        <Experience />
-        <Skills />
-        <Projects />
-        <Contact />
+        <main role="main">
+            <Hero />
+            <About />
+            <Experience />
+            <Skills />
+            <Projects />
+            <Contact />
+        </main>
     </Layout>
 );
 

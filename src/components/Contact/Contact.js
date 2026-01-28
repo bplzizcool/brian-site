@@ -84,11 +84,26 @@ const StyledFormHelper = styled(Typography)({
     fontSize: '0.75rem',
 });
 
+const SocialMediaContainer = styled(Box)({
+    display: 'flex',
+    justifyContent: 'center',
+    flexWrap: 'wrap',
+    gap: '8px',
+    marginTop: '16px',
+});
+
 const getSocialIcon = (url) => {
     if (url.includes('github.com')) return <GitHubIcon />;
     if (url.includes('linkedin.com')) return <LinkedInIcon />;
     if (url.includes('twitter.com')) return <TwitterIcon />;
     return <GitHubIcon />;
+};
+
+const getSocialPlatform = (url) => {
+    if (url.includes('github.com')) return 'GitHub';
+    if (url.includes('linkedin.com')) return 'LinkedIn';
+    if (url.includes('twitter.com')) return 'Twitter';
+    return 'Social Media';
 };
 
 const Contact = () => {
@@ -239,43 +254,76 @@ const Contact = () => {
     };
 
     return (
-        <StyledContactBox>
-            <StyledHeader variant="h4" gutterBottom>Contact</StyledHeader>
-            <StyledEmail variant="body1" gutterBottom>{profile.Email}</StyledEmail>
-            <Box>
-                {profile.SocialMedias && profile.SocialMedias.map((url, idx) => (
-                    <StyledIconButton
-                        key={idx}
-                        href={url}
-                        target="_blank"
-                        rel="noopener"
-                        color="primary"
-                    >
-                        {getSocialIcon(url)}
-                    </StyledIconButton>
-                ))}
-            </Box>
+        <StyledContactBox role="region" aria-labelledby="contact-heading">
+            <StyledHeader variant="h4" component="h2" gutterBottom id="contact-heading">Contact</StyledHeader>
+            <StyledEmail variant="body1" gutterBottom id="contact-email">
+                Email: <a
+                    href={`mailto:${profile.Email}`}
+                    style={{ color: 'inherit', textDecoration: 'underline' }}
+                    aria-label={`Send email to ${profile.Email}`}
+                >
+                    {profile.Email}
+                </a>
+            </StyledEmail>
 
-            <StyledForm onSubmit={formik.handleSubmit}>
+            <SocialMediaContainer
+                role="list"
+                aria-label="Connect on social media"
+            >
+                {profile.SocialMedias && profile.SocialMedias.map((url, idx) => (
+                    <div key={idx} role="listitem">
+                        <StyledIconButton
+                            href={url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            color="primary"
+                            aria-label={`Connect with me on ${getSocialPlatform(url)}`}
+                            title={`Visit my ${getSocialPlatform(url)} profile`}
+                        >
+                            {getSocialIcon(url)}
+                        </StyledIconButton>
+                    </div>
+                ))}
+            </SocialMediaContainer>
+
+            <StyledForm
+                onSubmit={formik.handleSubmit}
+                aria-labelledby="contact-form-heading"
+                noValidate
+            >
+                <Typography
+                    variant="h6"
+                    id="contact-form-heading"
+                    sx={{ marginBottom: 2, color: 'rgba(255,255,255,0.85)' }}
+                >
+                    Send me a message
+                </Typography>
+
                 <StyledTextField
                     fullWidth
                     label="Name"
                     name="name"
+                    id="form-name"
                     value={formik.values.name}
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
                     variant="outlined"
                     error={formik.touched.name && Boolean(formik.errors.name)}
                     disabled={formik.isSubmitting}
+                    inputProps={{
+                        'aria-describedby': formik.touched.name && formik.errors.name ? "name-error" : undefined,
+                        'aria-required': 'true'
+                    }}
                 />
                 {formik.touched.name && formik.errors.name && (
-                    <StyledFormHelper>{formik.errors.name}</StyledFormHelper>
+                    <StyledFormHelper id="name-error" role="alert">{formik.errors.name}</StyledFormHelper>
                 )}
 
                 <StyledTextField
                     fullWidth
                     label="Email"
                     name="email"
+                    id="form-email"
                     type="email"
                     value={formik.values.email}
                     onChange={formik.handleChange}
@@ -283,15 +331,20 @@ const Contact = () => {
                     variant="outlined"
                     error={formik.touched.email && Boolean(formik.errors.email)}
                     disabled={formik.isSubmitting}
+                    inputProps={{
+                        'aria-describedby': formik.touched.email && formik.errors.email ? "email-error" : undefined,
+                        'aria-required': 'true'
+                    }}
                 />
                 {formik.touched.email && formik.errors.email && (
-                    <StyledFormHelper>{formik.errors.email}</StyledFormHelper>
+                    <StyledFormHelper id="email-error" role="alert">{formik.errors.email}</StyledFormHelper>
                 )}
 
                 <StyledTextField
                     fullWidth
                     label="Message"
                     name="message"
+                    id="form-message"
                     value={formik.values.message}
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
@@ -300,9 +353,19 @@ const Contact = () => {
                     rows={4}
                     error={formik.touched.message && Boolean(formik.errors.message)}
                     disabled={formik.isSubmitting}
+                    inputProps={{
+                        'aria-describedby': formik.touched.message && formik.errors.message ? "message-error" : "message-hint",
+                        'aria-required': 'true'
+                    }}
+                    helperText="Minimum 10 characters"
                 />
                 {formik.touched.message && formik.errors.message && (
-                    <StyledFormHelper>{formik.errors.message}</StyledFormHelper>
+                    <StyledFormHelper id="message-error" role="alert">{formik.errors.message}</StyledFormHelper>
+                )}
+                {!formik.errors.message && (
+                    <Typography id="message-hint" variant="caption" sx={{ color: 'rgba(255,255,255,0.6)', marginLeft: 2, marginBottom: 1 }}>
+                        Enter your message (minimum 10 characters)
+                    </Typography>
                 )}
 
                 <StyledSubmitButton
@@ -312,6 +375,7 @@ const Contact = () => {
                     fullWidth
                     disabled={formik.isSubmitting}
                     endIcon={!formik.isSubmitting && <SendIcon />}
+                    aria-busy={formik.isSubmitting}
                 >
                     {formik.isSubmitting ? (
                         <CircularProgress size={24} color="inherit" />
@@ -327,7 +391,12 @@ const Contact = () => {
                 onClose={handleCloseSnackbar}
                 anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
             >
-                <Alert onClose={handleCloseSnackbar} severity={snackbar.severity}>
+                <Alert
+                    onClose={handleCloseSnackbar}
+                    severity={snackbar.severity}
+                    role="status"
+                    aria-live="polite"
+                >
                     {snackbar.message}
                 </Alert>
             </Snackbar>

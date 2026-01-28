@@ -11,9 +11,9 @@ const StyledBody = styled(Typography)({
 });
 
 const About = () => (
-    <StyledBox>
-        <StyledAreaTitle variant="h4" gutterBottom>About Me</StyledAreaTitle>
-        <StyledBody variant="body1">{profile.About}</StyledBody>
+    <StyledBox role="region" aria-labelledby="about-heading">
+        <StyledAreaTitle variant="h4" component="h2" gutterBottom id="about-heading">About Me</StyledAreaTitle>
+        <StyledBody variant="body1" id="about-content">{profile.About}</StyledBody>
     </StyledBox>
 );
 

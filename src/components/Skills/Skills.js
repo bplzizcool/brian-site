@@ -19,20 +19,41 @@ const StyledAreaTitle = styled(StyledHeader)(({ theme }) => ({
 }));
 
 const Skills = () => (
-    <StyledSkillsBox>
-        <StyledHeader variant="h4" gutterBottom>Skills</StyledHeader>
-        <Grid container spacing={2}>
+    <StyledSkillsBox role="region" aria-labelledby="skills-heading">
+        <StyledHeader variant="h4" component="h2" gutterBottom id="skills-heading">Skills</StyledHeader>
+        <Grid
+            container
+            spacing={2}
+            role="list"
+            aria-label="Technical skills by category"
+        >
             {profile.Skills && profile.Skills.map(skill => (
-                <Grid container size={6} key={skill.Area}>
-                    <StyledCard>
-                        <StyledAreaTitle variant="h6">{skill.Area}</StyledAreaTitle>
-                        <StyledChipContainer>
+                <Grid
+                    container
+                    size={6}
+                    key={skill.Area}
+                    role="listitem"
+                >
+                    <StyledCard
+                        aria-labelledby={`skill-area-${skill.Area}`}
+                        aria-describedby={`skill-list-${skill.Area}`}
+                    >
+                        <StyledAreaTitle variant="h6" id={`skill-area-${skill.Area}`}>
+                            {skill.Area}
+                        </StyledAreaTitle>
+                        <StyledChipContainer
+                            role="list"
+                            id={`skill-list-${skill.Area}`}
+                            aria-label={`${skill.Area} skills`}
+                        >
                             {skill.SkillSet.map(s => (
-                                <TechChip
-                                    label={s.Name}
-                                    key={s.Name}
-                                    hot={s.Hot ? "true" : "false"}
-                                />
+                                <div key={s.Name} role="listitem">
+                                    <TechChip
+                                        label={s.Name}
+                                        hot={s.Hot ? "true" : "false"}
+                                        aria-label={`${s.Name}${s.Hot ? ', highly experienced' : ''}`}
+                                    />
+                                </div>
                             ))}
                         </StyledChipContainer>
                     </StyledCard>
