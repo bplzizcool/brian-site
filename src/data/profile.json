@@ -1,7 +1,7 @@
 {
   "Name": "Brian Lane",
   "Position": "Application Engineer",
-  "Description": "Coding, Creativity, and a Passion for Spaceflight",
+  "Description": "Software Engineer & AI Automation Specialist",
   "Address": "Atlanta, GA",
   "Company": "Capital One",
   "School": "Georgia State University",
@@ -18,9 +18,7 @@
         {
           "title": "Application Engineer",
           "description": [
-            "I serve as the code owner of the Diners Club Globalnet application, where I've led significant modernization efforts. I'm responsible for all deployments and enhancements to this critical system, ensuring its continued evolution and optimal performance.",
-            "My role involves designing, implementing, and documenting software changes while providing extensive testing and support both internally and externally. I actively participate in analysis, design, testing, and review processes, providing accurate estimations of work based on requirements. ",
-            "I write detailed product specifications, designs, and technical manuals, and evaluate third-party products and specifications. Leveraging my experience and knowledge of the environment, I make informed development decisions and maintain responsibility for assigned tasks. Additionally, I educate both technical and non-technical team members on areas of my expertise and provide development-level support throughout the product lifecycle."
+          "Code owner of the Diners Club Globalnet application responsible for modernization, deployments, and system enhancements. I design and implement software changes, lead testing and review processes, and provide technical leadership across design, specification, and product lifecycle support. Advanced practitioner of agentic and generative AI, applying LLMs and autonomous agents to automate workflows and build custom tools. I'm a proponent for integrating modern AI models into team workflows to reduce manual effort and accelerate delivery."
           ],
           "startDate": "2025-02-15",
           "currentJob": true,
@@ -84,6 +82,47 @@
     }
   ],
   "Skills": [
+    {
+      "Area": "AI & Automation",
+      "SkillSet": [
+        {
+          "Name": "Agentic AI & Autonomous Agents",
+          "Hot": true
+        },
+        {
+          "Name": "Generative AI (LLMs & multimodal)",
+          "Hot": true
+        },
+        {
+          "Name": "Prompt engineering & chain-of-thought design",
+          "Hot": true
+        },
+        {
+          "Name": "AI tool development & automation",
+          "Hot": true
+        },
+        {
+          "Name": "Model integration & API orchestration",
+          "Hot": true
+        },
+        {
+          "Name": "Gemini",
+          "Hot": true
+        },
+        {
+          "Name": "GitHub Copilot",
+          "Hot": true
+        },
+        {
+          "Name": "Claude Code",
+          "Hot": true
+        },
+        {
+          "Name": "Windsurf",
+          "Hot": true
+        }
+      ]
+    },
     {
       "Area": "Frontend Development",
       "SkillSet": [
@@ -411,5 +450,5 @@
       "Awards": []
     }
   ],
-  "About": "I am a passionate software engineer with a strong background in web development, specializing in creating dynamic and responsive user interfaces. With a keen eye for design and a love for problem-solving, I strive to deliver impactful solutions that enhance user experiences."
+  "About": "I'm a software engineer focused on building dynamic web interfaces and creating practical solutions through automation. I work extensively with agentic and generative AI, using tools like Gemini, Claude, and GitHub Copilot to automate workflows, reduce manual effort, and build custom productivity tools. I'm passionate about bringing modern AI models into team workflows and seeing how they can accelerate delivery and solve real problems."
 }
